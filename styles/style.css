@@ -218,3 +218,25 @@ html {
   gap: 32px;
   cursor: pointer;
 }
+button:hover {
+  background: rgba(83, 195, 3, 0.63);
+  transition: all 0.15s;
+}
+.scroll-watcher {
+  height: 2px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: lime;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
